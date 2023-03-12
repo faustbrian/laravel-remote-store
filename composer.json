@@ -17,6 +17,7 @@
     "homepage": "https://github.com/preemstudio/laravel-remote-store",
     "require": {
         "php": "^8.2",
+        "graham-campbell/github": "^12.2",
         "guzzlehttp/guzzle": "^7.5",
         "http-interop/http-factory-guzzle": "^1.2",
         "illuminate/contracts": "*",
@@ -53,7 +54,8 @@
         "allow-plugins": {
             "pestphp/pest-plugin": true,
             "phpstan/extension-installer": true,
-            "ergebnis/composer-normalize": true
+            "ergebnis/composer-normalize": true,
+            "php-http/discovery": true
         },
         "sort-packages": true
     },
