@@ -18,7 +18,7 @@ final class PinataStore implements Store
         $this->gateway = Http::baseUrl('https://gateway.pinata.cloud/');
 
         $this->api = Http::baseUrl('https://api.pinata.cloud/')->withHeaders([
-            'pinata_api_key'        => config('services.pinata.key'),
+            'pinata_api_key' => config('services.pinata.key'),
             'pinata_secret_api_key' => config('services.pinata.secret'),
         ]);
     }

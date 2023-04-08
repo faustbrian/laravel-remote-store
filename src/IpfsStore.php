@@ -16,7 +16,7 @@ final class IpfsStore implements Store
     public function __construct()
     {
         $this->gateway = Http::baseUrl(config('services.ipfs.gateway'));
-        $this->api     = Http::baseUrl(config('services.ipfs.api'));
+        $this->api = Http::baseUrl(config('services.ipfs.api'));
     }
 
     public function read(FileDataTransferObject $file): array
@@ -31,13 +31,13 @@ final class IpfsStore implements Store
     {
         $hash = $this->api
             ->asMultipart()
-            ->attach($file->name, json_encode($file->data))
+            ->attach($file->name, \json_encode($file->data))
             ->post('add')
             ->throw()
             ->json()['Hash'];
 
         $this->api
-            ->post("pin/add/$hash")
+            ->post("pin/add/{$hash}")
             ->throw();
 
         return $hash;

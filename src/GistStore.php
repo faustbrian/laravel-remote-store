@@ -17,8 +17,8 @@ final class GistStore implements Store
     {
         return GitHub::gists()->create([
             'public' => false,
-            'files'  => [
-                $file->name => ['content' => json_encode($file->data)],
+            'files' => [
+                $file->name => ['content' => \json_encode($file->data)],
             ],
         ])['id'];
     }
@@ -27,8 +27,8 @@ final class GistStore implements Store
     {
         return GitHub::gists()->update($file['hash'], [
             'public' => false,
-            'files'  => [
-                $file->name => ['content' => json_encode($file->data)],
+            'files' => [
+                $file->name => ['content' => \json_encode($file->data)],
             ],
         ])['id'];
     }

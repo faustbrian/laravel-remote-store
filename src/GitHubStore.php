@@ -14,7 +14,7 @@ final class GitHubStore implements Store
 
     public function __construct()
     {
-        $this->username   = config('services.github.username');
+        $this->username = config('services.github.username');
         $this->repository = config('services.github.repository');
     }
 
@@ -33,7 +33,7 @@ final class GitHubStore implements Store
             $this->username,
             $this->repository,
             $file->name,
-            json_encode($file->data),
+            \json_encode($file->data),
             'Apollo',
             'main',
             ['name' => 'Apollo', 'email' => 'noreply@apollo.blog'],
@@ -46,7 +46,7 @@ final class GitHubStore implements Store
             $this->username,
             $this->repository,
             $file->name,
-            json_encode($file->data),
+            \json_encode($file->data),
             'Apollo',
             $file->hash,
             'main',

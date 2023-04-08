@@ -28,7 +28,7 @@ final class InfuraStore implements Store
     {
         $hash = $this->client
             ->asMultipart()
-            ->attach($file->name, json_encode($file->data))
+            ->attach($file->name, \json_encode($file->data))
             ->post('add')
             ->throw()
             ->json()['Hash'];
