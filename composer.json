@@ -14,7 +14,7 @@
             "role": "Developer"
         }
     ],
-    "homepage": "https://github.com/BombenProdukt/laravel-remote-store",
+    "homepage": "https://github.com/faustbrian/laravel-remote-store",
     "require": {
         "php": "^8.2",
         "graham-campbell/github": "^12.2",
