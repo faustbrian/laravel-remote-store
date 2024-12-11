@@ -1,0 +1,15 @@
+{
+    "symbol-whitelist": [
+        "array",
+        "bool",
+        "false",
+        "int",
+        "null",
+        "self",
+        "string",
+        "true",
+        "config",
+        "Illuminate\\Http\\Client\\PendingRequest",
+        "Illuminate\\Support\\Facades\\Http"
+    ]
+}
