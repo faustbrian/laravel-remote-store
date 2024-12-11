@@ -1,0 +1,59 @@
+{
+    "name": "basecodeoy/remote-store",
+    "description": "A package to easily make us of various remote storage systems with Laravel.",
+    "license": "MIT",
+    "type": "library",
+    "keywords": [
+        "BaseCode Oy",
+        "laravel",
+        "remote-store"
+    ],
+    "authors": [
+        {
+            "name": "Brian Faust",
+            "email": "hello@basecode.sh",
+            "role": "Developer"
+        }
+    ],
+    "homepage": "https://github.com/basecodeoy/remote-store",
+    "support": {
+        "issues": "https://github.com/basecodeoy/remote-store/issues",
+        "source": "https://github.com/basecodeoy/remote-store",
+        "security": "https://github.com/basecodeoy/remote-store/blob/main/.github/SECURITY.md"
+    },
+    "require": {
+        "php": "^8.3",
+        "basecodeoy/crate": "^1.0.0",
+        "graham-campbell/github": "^12.6",
+        "guzzlehttp/guzzle": "^7.9.2",
+        "http-interop/http-factory-guzzle": "^1.2",
+        "illuminate/contracts": "^11.0",
+        "spatie/laravel-data": "^4.11.1"
+    },
+    "require-dev": {
+        "basecodeoy/standards": "^1.1.1"
+    },
+    "autoload": {
+        "psr-4": {
+            "BaseCodeOy\\RemoteStore\\": "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Tests\\": "tests"
+        }
+    },
+    "config": {
+        "allow-plugins": {
+            "ergebnis/composer-normalize": true,
+            "pestphp/pest-plugin": true,
+            "php-http/discovery": true,
+            "phpstan/extension-installer": true
+        },
+        "audit": {
+            "abandoned": "report"
+        },
+        "preferred-install": "dist",
+        "sort-packages": true
+    }
+}
